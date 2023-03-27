@@ -1,0 +1,9 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('/mugshot.jpg');
+  background-size: 5rem;
+  font-family: Inter, 'apple-system', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
