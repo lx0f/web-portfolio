@@ -1,54 +1,34 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HappyCard from "./components/HappyCard.vue";
+import SadCard from "./components/SadCard.vue";
+
+import { ref } from "vue";
+
+const isHappy = ref(true);
+
+function simulateClick() {
+  const button = document.getElementById("button");
+  const event = new MouseEvent('click', {
+    view: window,
+    bubbles: true,
+    cancelable: true
+  });
+  button?.dispatchEvent(event);
+}
+simulateClick();
+
+setTimeout(() => {
+  document.getElementsByTagName("html")[0].style.backgroundImage = "url('/mugshot-mod.png')";
+  document.getElementsByTagName("html")[0].style.backgroundColor = "black";
+  isHappy.value = false;
+  alert("It's in the walls, it's in the walls, it's in the walls, it's in the walls");
+  alert("look behind you");
+}, 3000);
+</script>
 
 <template>
-  <div class="card">
-    <h1>Luth Andyka</h1>
-    <p>Hi, I'm a full-stack developer from Singapore.</p>
-    <ul>
-      <li>
-        Phone number: <a href="https://wa.me/6592229652">+65 92229652</a> <small>(whatsapp)</small>
-      </li>
-      <li>
-        Email: <a href="mailto:luthandyka.business@gmail.com">luthandyka.business@gmail.com</a>
-      </li>
-      <li>Github: <a href="https://github.com/lx0f">lx0f</a></li>
-    </ul>
-  </div>
+  <component :is="isHappy ? HappyCard : SadCard" />
 </template>
 
 <style scoped>
-/* stylify this anchor tag */
-/* include sick animation on hover */
-a {
-  color: white;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-
-a:hover {
-  color: yellow;
-  font-size: 16em;
-  font-weight: 900;
-  transform: scale(1.1);
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  background-color: salmon;
-  color: white;
-  text-align: center;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 1rem;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
 </style>
