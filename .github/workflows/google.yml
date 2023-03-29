@@ -4,7 +4,9 @@ name: Build, Publish & Deploy to Cloud Run
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - master
+      - main
 
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID }}
