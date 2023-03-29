@@ -1,5 +1,3 @@
-# test
-
 name: Build, Publish & Deploy to Cloud Run
 
 on:
