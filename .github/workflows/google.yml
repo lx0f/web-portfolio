@@ -3,7 +3,6 @@ name: Build, Publish & Deploy to Cloud Run
 on:
   push:
     branches:
-      - master
       - main
 
 env:
