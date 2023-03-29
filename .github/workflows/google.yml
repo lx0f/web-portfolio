@@ -6,6 +6,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID }}
+  REGION: us-central1
   REPOSITORY: portfolio 
   IMAGE: static-site
   SHA: ${{ github.sha }}
