@@ -1,7 +1,6 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 <template>
-<div class="card">
+  <div class="card">
     <h1>Luth Andyka</h1>
     <p>Hi, I'm a full-stack developer from Singapore.</p>
     <ul>
@@ -13,7 +12,7 @@
       </li>
       <li>Github: <a href="https://github.com/lx0f">lx0f</a></li>
     </ul>
-</div>
+  </div>
 </template>
 <style scoped>
 a {

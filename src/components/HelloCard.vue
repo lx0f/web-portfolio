@@ -1,13 +1,11 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 <template>
-<div class="card">
+  <div class="card">
     <h1>Hello!</h1>
     <p>Thank you for coming to my website.</p>
     <p>I not speak english well but I appreciate your coming 🥰🥰🥰</p>
     <slot></slot>
-</div>
+  </div>
 </template>
 <style scoped>
 a {
